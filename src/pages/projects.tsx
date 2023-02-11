@@ -1,13 +1,20 @@
-import NavBar from "../components/Navbar";
+import NavBar from "../components/NavBar";
+import {Text} from "@chakra-ui/react";
 
 const Projects = () => {
   return (
   <div>
     <div className="App">
-      <h1>Projects</h1>
+    <Text bgGradient='radial(#7928CA, #FF0080)'
+        bgClip='text'
+        fontSize='6xl'
+        fontWeight='extrabold'>
+        Projects
+      </Text>
     </div>
     <div>
       <NavBar/>
+      <p> This website XD</p>
     </div>
   </div>
   );
