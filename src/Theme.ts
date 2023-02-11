@@ -13,13 +13,17 @@ const config = {
 /* https://github.com/chakra-ui/chakra-ui/discussions/5048 */
 const theme = extendTheme({ 
     config,
-    
     colors: {
         dark: dark,
         light: light,
         white: "#FFFFFF",
     },
-
+    fonts: {
+        body:"'Roboto', sans-serif",
+    },
+    fontSizes: {
+        xs: "0.75rem",
+    },
     styles: {
         global: (props)  => ({
             body: {

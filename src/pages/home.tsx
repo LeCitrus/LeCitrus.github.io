@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
-import {Button, useColorMode, ColorModeScript, useTheme, Text, Link} from "@chakra-ui/react";
+import {Button, useColorMode, ColorModeScript, useTheme, Link} from "@chakra-ui/react";
+import Header from '../components/header';
 
 const Home = () => {
 
@@ -9,17 +10,12 @@ const Home = () => {
     return (
     <div>
     <div className="App">
-      <Text bgGradient='radial(#7928CA, #FF0080)'
-        bgClip='text'
-        fontSize='6xl'
-        fontWeight='extrabold'>
-        Curtis Kan
-      </Text>
-      <Link href="https://github.com/LeCitrus">Github</Link>
+      <Header title="Curtis Kan"/>
     </div>
     <div className="Navbar">
       <NavBar/>
     </div>
+    <Link href="https://github.com/LeCitrus">Github</Link>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <Button onClick={toggleColorMode}>
       {colorMode === "light" ? "Whimsical" : "Silliness"}

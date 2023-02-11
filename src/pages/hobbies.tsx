@@ -2,18 +2,13 @@ import NavBar from '../components/NavBar';
 import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
-import {Text} from "@chakra-ui/react";
+import Header from '../components/header';
 
 const Hobbies = () => {
     return (
     <div>
       <div className="App">
-        <Text bgGradient='radial(#7928CA, #FF0080)'
-          bgClip='text'
-          fontSize='6xl'
-          fontWeight='extrabold'>
-          Hobbies
-      </Text>
+        <Header title="Hobbies"/>
       </div>
       <div>
         <NavBar/>
