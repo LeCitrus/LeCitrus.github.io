@@ -4,9 +4,16 @@ import {mode} from '@chakra-ui/theme-tools';
 const dark = "#282C34";
 const light = "#4A412A";
 
+const config = {
+    initialColorMode: 'light',
+    useSystemColorMode: false,
+  }
+
 
 /* https://github.com/chakra-ui/chakra-ui/discussions/5048 */
 const theme = extendTheme({ 
+    config,
+    
     colors: {
         dark: dark,
         light: light,
