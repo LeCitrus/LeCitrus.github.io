@@ -5,7 +5,7 @@ const dark = "#282C34";
 const light = "#4A412A";
 
 const config = {
-    initialColorMode: 'light',
+    initialColorMode: 'dark',
     useSystemColorMode: false,
   }
 

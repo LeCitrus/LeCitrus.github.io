@@ -14,8 +14,8 @@ const Projects = () => {
       <Center>
         <SimpleGrid columns = {3} spacing = {10}>
           <Project title="Imposter Detector" link="https://imposter-detector.vercel.app/"/>
-          <Project title="Math GPT" link="https://github.com/3iq-hacks/mathgpt"/>
-          <Project title="Lost and Coffee" link="https://github.com/LeCitrus/Lost-and-Coffee"/>
+          <Project title="Math GPT" link="https://arithme.tech/"/>
+          <Project title="Lost and Coffee (repo)" link="https://github.com/LeCitrus/Lost-and-Coffee"/>
         </SimpleGrid>
       </Center>
     </div>

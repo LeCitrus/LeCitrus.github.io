@@ -22,7 +22,7 @@ const Home = () => {
         <Link href="https://www.linkedin.com/in/curtis-kan-33446a1b3/">Linkedin</Link>
         <Link href="mailto:curtis.tl.kan@gmail.com">Gmail</Link>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <Button onClick={toggleColorMode}>
+        <Button size='md' onClick={toggleColorMode} _hover={{size: '5xl'}}>
           {colorMode === "light" ? "Whimsical" : "Silliness"}
         </Button>
         <Image src={Resume} htmlWidth='800px'></Image>
