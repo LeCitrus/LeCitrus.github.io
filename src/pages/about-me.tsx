@@ -13,8 +13,9 @@ const About = () => {
     </div>
     <div>
       <Center>
-        <Box borderRadius='lg' bg="black" w='200px' h='200px' alignItems='center' display='flex'>
-          <Text>I am in 3rd year Specialization CS</Text>
+        <Box borderRadius='lg' bg="black" p={10}>
+          <Text>I am in my 3rd year of a Specialization CS degree at the University of Alberta</Text>
+          <Text>I love to learn new things! Currently I am learning how to handstand.</Text>
         </Box>
       </Center>
     </div>

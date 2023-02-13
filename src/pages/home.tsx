@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar';
-import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack} from "@chakra-ui/react";
+import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack, Image} from "@chakra-ui/react";
 import Header from '../components/header';
+import Resume from '../images/resume.jpg'
 
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
         <Button onClick={toggleColorMode}>
           {colorMode === "light" ? "Whimsical" : "Silliness"}
         </Button>
+        <Image src={Resume} htmlWidth='800px'></Image>
     </VStack>
     </div>
     );
