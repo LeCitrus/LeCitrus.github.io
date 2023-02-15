@@ -1,13 +1,18 @@
 import NavBar from '../components/NavBar';
 import Header from '../components/header';
 import Origami from '../components/Origami';
-import {SimpleGrid, Text, Center, IconButton, Link} from '@chakra-ui/react';
+import {SimpleGrid, Text, Center, IconButton, Link, Image} from '@chakra-ui/react';
 import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
 import Clover from '../images/clover top.jpg';
 import Hex from '../images/hex top.jpg';
-import {ArrowDownIcon, Icon} from '@chakra-ui/icons';
+import p1 from '../images/photo1.jpg';
+import p2 from '../images/photo2.jpg';
+import p3 from '../images/photo3.jpg';
+import p4 from '../images/photo4.jpg';
+import p5 from '../images/photo5.jpg';
+import {ArrowDownIcon} from '@chakra-ui/icons';
 
 const Hobbies = () => {
     return (
@@ -43,7 +48,24 @@ const Hobbies = () => {
           </SimpleGrid>
         </Center>
         <Center>
-          <Text id='photography' fontSize='4xl' m={10}>Photography</Text>
+          <Text id='photography' fontSize='4xl' mt={10}>Photography</Text>
+        </Center>
+        <Center>
+          <Text fontSize='2xl' m={5}>I like to take pictures of nature sometimes.</Text>
+        </Center>
+        <Center>
+          <SimpleGrid columns = {3} spacing = {10}>
+            <Image src={p1}/>
+            <Image src={p2}/>
+            <Image src={p3}/>
+            <Image src={p4}/>
+            <Image src={p5}/>
+          </SimpleGrid>
+        </Center>
+      </div>
+      <div>
+        <Center>
+          <Text>The code for this website is on github.</Text>
         </Center>
       </div>
     </div>

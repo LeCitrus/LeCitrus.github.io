@@ -19,7 +19,7 @@ const theme = extendTheme({
         white: "#FFFFFF",
     },
     fonts: {
-        body:"'Roboto', sans-serif",
+        body:"'Raleway', sans-serif",
     },
     fontSizes: {
         xs: "0.75rem",
