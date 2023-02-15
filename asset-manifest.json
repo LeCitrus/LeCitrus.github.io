@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.3128e643.css",
-    "main.js": "/static/js/main.182df854.js",
+    "main.css": "/static/css/main.bb1614f8.css",
+    "main.js": "/static/js/main.fd0542db.js",
     "static/js/787.da273028.chunk.js": "/static/js/787.da273028.chunk.js",
+    "static/media/photo1.jpg": "/static/media/photo1.5831a0fc344df3f31f8e.jpg",
+    "static/media/photo3.jpg": "/static/media/photo3.dbe2e089b1f9fa480e98.jpg",
+    "static/media/photo2.jpg": "/static/media/photo2.653904cf3386b87b5f5a.jpg",
     "static/media/hex top.jpg": "/static/media/hex top.f9fa45c02589c26399d5.jpg",
     "static/media/eiffel.jpg": "/static/media/eiffel.c921447c9c31b88b34a0.jpg",
     "static/media/clover top.jpg": "/static/media/clover top.d6b2929826828fbdab88.jpg",
+    "static/media/photo5.jpg": "/static/media/photo5.263fab4181062241cb95.jpg",
+    "static/media/photo4.jpg": "/static/media/photo4.85ccce633a04dbe7ce01.jpg",
     "static/media/spring.jpg": "/static/media/spring.1cef55cfa2803fc9874f.jpg",
     "static/media/resume.jpg": "/static/media/resume.c59cab1447475c9a7cb0.jpg",
     "static/media/echidna.jpg": "/static/media/echidna.d48edd635f55456f940b.jpg",
     "index.html": "/index.html",
-    "main.3128e643.css.map": "/static/css/main.3128e643.css.map",
-    "main.182df854.js.map": "/static/js/main.182df854.js.map",
+    "main.bb1614f8.css.map": "/static/css/main.bb1614f8.css.map",
+    "main.fd0542db.js.map": "/static/js/main.fd0542db.js.map",
     "787.da273028.chunk.js.map": "/static/js/787.da273028.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3128e643.css",
-    "static/js/main.182df854.js"
+    "static/css/main.bb1614f8.css",
+    "static/js/main.fd0542db.js"
   ]
 }
