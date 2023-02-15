@@ -30,12 +30,14 @@ const Projects = () => {
           <Project title="Movie Database With Pymongo (repo)" link="https://github.com/LeCitrus/CMPUT291-Mini-Project-2"/>
         </SimpleGrid>
       </Center>
+      <Center>
+        <Text fontSize='5xl' m={5}>Personal projects</Text>
+      </Center>
+      <Center>
+        <SimpleGrid columns = {2} spacing = {10}>
+        </SimpleGrid>
+      </Center>
     </div>
-    <div>
-        <Center>
-          <Text>The code for this website is on github.</Text>
-        </Center>
-      </div>
   </div>
   );
 };

@@ -27,9 +27,10 @@ const theme = extendTheme({
     styles: {
         global: (props)  => ({
             body: {
-                bg: mode(light, dark)(props)
-                
+                bg: mode(light, dark)(props),
+                color: mode('red', 'white')(props),
             }
+        
         })
     }
 });

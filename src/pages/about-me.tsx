@@ -19,11 +19,6 @@ const About = () => {
         </Box>
       </Center>
     </div>
-    <div>
-        <Center>
-          <Text>The code for this website is on github.</Text>
-        </Center>
-      </div>
   </div>
   );
 };

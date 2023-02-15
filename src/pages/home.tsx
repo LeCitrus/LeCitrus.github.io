@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar';
-import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack, Image, Center} from "@chakra-ui/react";
+import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack, Image} from "@chakra-ui/react";
 import Header from '../components/header';
 import Resume from '../images/resume.jpg'
 
@@ -25,13 +25,11 @@ const Home = () => {
         <Button size='md' onClick={toggleColorMode} _hover={{size: '5xl'}}>
           {colorMode === "light" ? "Whimsical" : "Silliness"}
         </Button>
-        <Image src={Resume} htmlWidth='800px'></Image>
+        <Image src={Resume} htmlWidth='800px' p={10}></Image>
     </VStack>
-    <div>
-        <Center>
-          <Text>The code for this website is on github.</Text>
-        </Center>
-      </div>
+    <div className="footer">
+      <Text>The code for this website is on github.</Text>
+    </div>
     </div>
     );
   };
