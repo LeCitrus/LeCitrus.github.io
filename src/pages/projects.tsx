@@ -34,7 +34,8 @@ const Projects = () => {
         <Text fontSize='5xl' m={5}>Personal projects</Text>
       </Center>
       <Center>
-        <SimpleGrid columns = {2} spacing = {10}>
+        <SimpleGrid columns = {1} spacing = {10}>
+          <Project title="Fish Game (JS)" link="https://github.com/LeCitrus/Fish-Game-JS"/>
         </SimpleGrid>
       </Center>
     </div>
