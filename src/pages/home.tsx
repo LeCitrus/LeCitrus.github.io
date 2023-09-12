@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar';
 import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack, Image} from "@chakra-ui/react";
-import Header from '../components/header';
+import Header from '../components/Header';
 import Resume from '../images/resume.jpg';
 import {useState, useEffect} from 'react';
 

@@ -5,10 +5,10 @@ const Header = ({
     title,
 }) => {
     return (
-        <Text bgGradient='radial(#ADD8E6, #00008B)'
+        <Text bgGradient='radial(#ADD8E6, #FFFFFF)'
         bgClip='text'
-        fontSize='7xl'
-        fontWeight='extrabold'>
+        fontSize='8xl'
+        letterSpacing={10}>
         {title}
       </Text>
     );

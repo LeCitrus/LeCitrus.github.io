@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Project from "../components/Project";
 import { SimpleGrid, Center, Text} from "@chakra-ui/react";
 

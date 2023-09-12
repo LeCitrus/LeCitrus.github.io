@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar';
-import Header from '../components/header';
+import Header from '../components/Header';
 import Origami from '../components/Origami';
 import {SimpleGrid, Text, Center, IconButton, Link, Image} from '@chakra-ui/react';
 import Eiffel from '../images/eiffel.jpg';
@@ -12,6 +12,7 @@ import p2 from '../images/photo2.jpg';
 import p3 from '../images/photo3.jpg';
 import p4 from '../images/photo4.jpg';
 import p5 from '../images/photo5.jpg';
+import p6 from '../images/photo6.jpg';
 import {ArrowDownIcon} from '@chakra-ui/icons';
 
 const Hobbies = () => {
@@ -60,6 +61,7 @@ const Hobbies = () => {
             <Image src={p3}/>
             <Image src={p4}/>
             <Image src={p5}/>
+            <Image src={p6}/>
           </SimpleGrid>
         </Center>
       </div>
