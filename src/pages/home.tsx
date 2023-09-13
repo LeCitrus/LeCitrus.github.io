@@ -1,7 +1,8 @@
 import NavBar from '../components/NavBar';
-import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack, Image} from "@chakra-ui/react";
+import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack} from "@chakra-ui/react";
 import Header from '../components/Header';
 import Resume from '../images/resume.jpg';
+import ImageComponent from '../components/ImageComponent';
 import {useState, useEffect} from 'react';
 
 const Home = () => {
@@ -43,11 +44,8 @@ const Home = () => {
         </Button>
         <Button onClick={() => increment()}>Cookie clicker</Button>
         <Text>{count}</Text>
-        <Image src={Resume} htmlWidth='800px' p={10}></Image>
+        <ImageComponent src={Resume} title="Resume"></ImageComponent>
     </VStack>
-    <div className="footer">
-      <Text>The code for this website is on github.</Text>
-    </div>
     </div>
     );
   };

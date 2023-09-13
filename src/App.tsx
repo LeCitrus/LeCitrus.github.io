@@ -1,6 +1,7 @@
 import './App.css';
 import Main from './components/Main';
-import {Text} from "@chakra-ui/react";
+import { Link } from '@chakra-ui/react';
+import {StarIcon} from '@chakra-ui/icons';
 
 
 // https://stackoverflow.com/questions/41956465/how-to-create-multiple-page-app-using-react
@@ -10,7 +11,7 @@ function App() {
     <div>
       <Main/>
       <div className="footer">
-      <Text>The code for this website is on github.</Text>
+      <Link href="https://github.com/LeCitrus/LeCitrus.github.io" isExternal><StarIcon/>The code for this website is on Github. <StarIcon/></Link>
       </div>
     </div>
     

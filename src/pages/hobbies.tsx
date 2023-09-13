@@ -1,7 +1,7 @@
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Origami from '../components/Origami';
-import {SimpleGrid, Text, Center, IconButton, Link, Image} from '@chakra-ui/react';
+import {SimpleGrid, Text, Center, Link, VStack} from '@chakra-ui/react';
 import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
@@ -13,7 +13,7 @@ import p3 from '../images/photo3.jpg';
 import p4 from '../images/photo4.jpg';
 import p5 from '../images/photo5.jpg';
 import p6 from '../images/photo6.jpg';
-import {ArrowDownIcon} from '@chakra-ui/icons';
+import ImageComponent from '../components/ImageComponent';
 
 const Hobbies = () => {
     return (
@@ -24,21 +24,17 @@ const Hobbies = () => {
       <div>
         <NavBar/>
       </div>
+      <VStack alignItems="left" >
+      <Link href="#origami" fontSize={22}>Origami</Link>
+      <Link href="#photography" fontSize={22}>Photography</Link>
+      </VStack>
       <div>
         <Center>
-          <Text fontSize='4xl'>Origami</Text>
+          <Text fontSize='4xl' id="origami">Origami</Text>
         </Center>
         <Center m={5}>
           <Text fontSize='2xl'>"The Japanese art of folding paper into decorative shapes and figures." here are some of my creations!</Text>
         </Center>
-        <IconButton
-          as={Link}
-          variant='outline'
-          colorScheme='teal'
-          aria-label='Send email'
-          icon={<ArrowDownIcon />}
-          href='#photography'
-        />
         <Center>
           <SimpleGrid columns = {3} spacing = {10}>
             <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn"/>
@@ -52,16 +48,16 @@ const Hobbies = () => {
           <Text id='photography' fontSize='4xl' mt={10}>Photography</Text>
         </Center>
         <Center>
-          <Text fontSize='2xl' m={5}>I like to take pictures of nature sometimes.</Text>
+          <Text fontSize='2xl' m={5}>I like to take pictures sometimes!</Text>
         </Center>
         <Center>
           <SimpleGrid columns = {3} spacing = {10}>
-            <Image src={p1}/>
-            <Image src={p2}/>
-            <Image src={p3}/>
-            <Image src={p4}/>
-            <Image src={p5}/>
-            <Image src={p6}/>
+            <ImageComponent src={p1} title="Rock Stack"/>
+            <ImageComponent src={p2} title="River"/>
+            <ImageComponent src={p3} title="Water"/>
+            <ImageComponent src={p4} title="Fog"/>
+            <ImageComponent src={p5} title="Flowing Water"/>
+            <ImageComponent src={p6} title="Star Trails"/>
           </SimpleGrid>
         </Center>
       </div>

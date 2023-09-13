@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Project from "../components/Project";
-import { SimpleGrid, Center, Text} from "@chakra-ui/react";
+import { SimpleGrid, Center, Text, VStack, Link} from "@chakra-ui/react";
 
 const Projects = () => {
   return (
@@ -11,8 +11,13 @@ const Projects = () => {
     </div>
     <div>
       <NavBar/>
+      <VStack alignItems="left" >
+        <Link href="#hackathon" fontSize={22}>Hackathon Projects</Link>
+        <Link href="#course" fontSize={22}>Course Projects</Link>
+        <Link href="#personal" fontSize={22}>Personal projects</Link>
+      </VStack>
       <Center>
-        <Text fontSize='5xl' m={5}>Hackathon Projects</Text>
+        <Text fontSize='5xl' m={5} id="hackathon">Hackathon Projects</Text>
       </Center>
       <Center>
         <SimpleGrid columns = {3} spacing = {10}>
@@ -22,7 +27,7 @@ const Projects = () => {
         </SimpleGrid>
       </Center>
       <Center>
-        <Text fontSize='5xl' m={5}>Course projects</Text>
+        <Text fontSize='5xl' m={5} id="course">Course projects</Text>
       </Center>
       <Center>
         <SimpleGrid columns = {2} spacing = {10}>
@@ -31,11 +36,12 @@ const Projects = () => {
         </SimpleGrid>
       </Center>
       <Center>
-        <Text fontSize='5xl' m={5}>Personal projects</Text>
+        <Text fontSize='5xl' m={5} id="personal">Personal projects</Text>
       </Center>
       <Center>
-        <SimpleGrid columns = {1} spacing = {10}>
+        <SimpleGrid columns = {2} spacing = {10}>
           <Project title="Fish Game (JS)" link="https://github.com/LeCitrus/Fish-Game-JS"/>
+          <Project title="Exercise Tracker" link="https://github.com/LeCitrus/Exercise-Tracker"/>
         </SimpleGrid>
       </Center>
     </div>

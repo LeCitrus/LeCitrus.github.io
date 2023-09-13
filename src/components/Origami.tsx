@@ -1,23 +1,17 @@
-import {Image, Text, Card, Center} from "@chakra-ui/react";
+import {Text, Card} from "@chakra-ui/react";
+import ImageComponent from "./ImageComponent";
 
 const Origami = ({
     title, image_src, author
 }) => {
     return (
-        <Card padding={10} borderColor="white" variant="outline">
-            <Center>
-                <Image src={image_src} boxSize='300px' borderRadius='10px'></Image>
-            </Center>
-            <Center>
-                <Text
-                fontSize='2xl'>
-                {title}
-                </Text>
-            </Center>
-            <Center>
-                <Text fontSize='s'>Designed by: {author}</Text>
-            </Center>
-            
+        <Card padding={10} borderColor="white" variant="outline" alignItems="center">
+        <ImageComponent src={image_src} title={title}></ImageComponent>
+        <Text
+        fontSize='2xl'>
+        {title}
+        </Text>
+        <Text fontSize='s'>Designed by: {author}</Text> 
         </Card>
     );
 };

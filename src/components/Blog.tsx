@@ -1,4 +1,4 @@
-import  {Text, Center, Box} from "@chakra-ui/react";
+import  {Text, Center, Card} from "@chakra-ui/react";
 
 /* https://chakra-ui.com/docs/components/popover */
 
@@ -7,10 +7,10 @@ const SubHeader  = ({
 }) => {
     return (
         <Center>
-            <Box borderRadius='lg' bg="black" p={10} maxWidth={1000}>
-                <Text fontSize={35}>{title}</Text>
-                <Text>{content}</Text>
-            </Box>
+            <Card borderRadius='lg' bg="black" p={10} width={1000} m={5} borderColor="white" variant="outline">
+                <Text fontSize={40}>{title}</Text>
+                <Text fontSize={20}>{content}</Text>
+            </Card>
         </Center>
     );
 };
