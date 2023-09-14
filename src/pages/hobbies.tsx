@@ -15,24 +15,8 @@ import p5 from '../images/photo5.jpg';
 import p6 from '../images/photo6.jpg';
 import p7 from '../images/photo7.jpg';
 import ImageComponent from '../components/ImageComponent';
-import { useState, useEffect} from 'react';
 
 const Hobbies = () => {
-
-  const [windowSize, setWindowSize] = useState(
-    window.innerWidth);
-
-    useEffect(() => {
-      const handleWindowResize = () => {
-        setWindowSize(window.innerWidth);
-      };
-  
-      window.addEventListener('resize', handleWindowResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleWindowResize);
-      };
-    }, []);
 
     return (
     <div>
@@ -54,13 +38,19 @@ const Hobbies = () => {
           <Text fontSize='2xl'>"The Japanese art of folding paper into decorative shapes and figures." here are some of my creations!</Text>
         </Center>
         <Center>
-          <SimpleGrid columns = {3} spacing = {10}>
-            <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn" description="Folded with 30x30cm tissue foil paper"/>
-            <Origami image_src={Spring} title="Spring" author="Jeff Beynon" description="Folded with printer paper"/>
-            <Origami image_src={Echidna} title="Echidna" author="Steven Casey" description="Folded with 30x30cm tissue foil paper"/>
-            <Origami image_src={Clover} title="Clover Tesselation" author="Shuzo Fujimoto" description="Folded with 30x30 tissue foil paper"/>
-            <Origami image_src={Hex} title="Hexagonal Tesselation" author="Eric Gjerde" description="Folded with 25x25 kami paper"/>
-          </SimpleGrid>
+          <HStack spacing='15px' margin='5px' alignItems="top">
+            <VStack>
+              <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn" description="Folded with 30x30cm tissue foil paper"/>
+              <Origami image_src={Spring} title="Spring" author="Jeff Beynon" description="Folded with printer paper"/>
+            </VStack>
+            <VStack>
+              <Origami image_src={Echidna} title="Echidna" author="Steven Casey" description="Folded with 30x30cm tissue foil paper"/>
+              <Origami image_src={Clover} title="Clover Tesselation" author="Shuzo Fujimoto" description="Folded with 30x30 tissue foil paper"/>
+            </VStack>
+            <VStack>
+              <Origami image_src={Hex} title="Hexagonal Tesselation" author="Eric Gjerde" description="Folded with 25x25 kami paper"/>
+            </VStack>
+            </HStack>
         </Center>
         <Center>
           <Text id='photography' fontSize='4xl' mt={10}>Photography</Text>
