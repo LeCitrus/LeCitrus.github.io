@@ -5,7 +5,15 @@ import Blog from "../components/Blog"
 import {Card, Center, Text} from "@chakra-ui/react";
 import { createIcon } from "@chakra-ui/react";
 
-const startrails = `My latest photography focus has been photographing star trails! I've always loved having night scenery desktop backgrounds.`
+const startrails = `My latest photography focus has been photographing star trails! I've always loved having night scenery desktop backgrounds.
+I don't have any of those huge chonker cameras, but I found some tutorials on YouTube to film using a GoPro 10, which I had gotten
+recently. There are 2 modes offered: video and photo mode. The first night I experimented using video mode, which gave me a smooth
+nightlapse of the night sky, but it was pretty boring. No shooting stars or anything, just clouds and stars slowly moving by. What I was
+really shooting for was those cool star trails you see online. For that, I would need photo mode. It's like video mode, except instead of the output
+being 1 video, it gave me 1 photo every minute. I left it out for the whole night and it gave me over 200 photos. Then, using a free software called
+StarStax, I overlayed all the photos into 1 photo, giving me the amazing photos in my photography section! I was surprised at how well it came out.
+Anyways, here is what I learned from my 4 days of filmin' stars: `
+
 const housecleaning = `I was jobless and sad in the Summer of 2023, so I decided to take on a doomed task: 
 cleaning my basement. Asian household basements are like Smaug's lair, except everything is mostly musty cardboard boxes,
 expired hand sanitizer, and ancient relics. You would think cleaning is just tedious and that there is no skill involved, but
