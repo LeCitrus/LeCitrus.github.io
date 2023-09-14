@@ -44,7 +44,7 @@ const Home = () => {
         </Button>
         <Button onClick={() => increment()}>Cookie clicker</Button>
         <Text>{count}</Text>
-        <ImageComponent src={Resume} title="Resume"></ImageComponent>
+        <ImageComponent src={Resume} title="Resume" description = ""></ImageComponent>
     </VStack>
     </div>
     );

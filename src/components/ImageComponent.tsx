@@ -1,10 +1,10 @@
 import {
     useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton,
-    Image
+    Image, Text
   } from '@chakra-ui/react'
 
 const ImageComponent = ({
-    src, title
+    src, title, description
 }) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -17,6 +17,7 @@ const ImageComponent = ({
           <ModalHeader>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
+            <Text>{description}</Text>
             <Image src={src}></Image>
           </ModalBody>
         </ModalContent>

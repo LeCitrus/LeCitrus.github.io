@@ -14,7 +14,14 @@ h1 {
 
 .footer {
   position: fixed;
+  margin: auto;
   bottom: 0;
-  width: 100%;
-  text-align: center;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.top {
+  position: fixed;
+  bottom: 50px;
 }

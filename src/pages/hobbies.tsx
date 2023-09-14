@@ -37,11 +37,11 @@ const Hobbies = () => {
         </Center>
         <Center>
           <SimpleGrid columns = {3} spacing = {10}>
-            <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn"/>
-            <Origami image_src={Spring} title="Spring" author="Jeff Beynon"/>
-            <Origami image_src={Echidna} title="Echidna" author="Steven Casey"/>
-            <Origami image_src={Clover} title="Clover Tesselation" author="Shuzo Fujimoto"/>
-            <Origami image_src={Hex} title="Hexagonal Tesselation" author="Eric Gjerde"/>
+            <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn" description="Folded with 30x30cm tissue foil paper"/>
+            <Origami image_src={Spring} title="Spring" author="Jeff Beynon" description="Folded with printer paper"/>
+            <Origami image_src={Echidna} title="Echidna" author="Steven Casey" description="Folded with 30x30cm tissue foil paper"/>
+            <Origami image_src={Clover} title="Clover Tesselation" author="Shuzo Fujimoto" description="Folded with 30x30 tissue foil paper"/>
+            <Origami image_src={Hex} title="Hexagonal Tesselation" author="Eric Gjerde" description="Folded with 25x25 kami paper"/>
           </SimpleGrid>
         </Center>
         <Center>
@@ -52,12 +52,12 @@ const Hobbies = () => {
         </Center>
         <Center>
           <SimpleGrid columns = {3} spacing = {10}>
-            <ImageComponent src={p1} title="Rock Stack"/>
-            <ImageComponent src={p2} title="River"/>
-            <ImageComponent src={p3} title="Water"/>
-            <ImageComponent src={p4} title="Fog"/>
-            <ImageComponent src={p5} title="Flowing Water"/>
-            <ImageComponent src={p6} title="Star Trails"/>
+            <ImageComponent src={p1} title="Rock Stack" description="Taken in panorama resort"/>
+            <ImageComponent src={p2} title="River" description="Experimenting with low shots"/>
+            <ImageComponent src={p3} title="Water" description="Experimenting with fast shutter speed"/>
+            <ImageComponent src={p4} title="Fog" description="Mountain fog after rain"/>
+            <ImageComponent src={p5} title="Flowing Water" description="Experimenting with long exposure"/>
+            <ImageComponent src={p6} title="Star Trails" description="Experimenting with image layering"/>
           </SimpleGrid>
         </Center>
       </div>
