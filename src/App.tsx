@@ -2,7 +2,6 @@ import './App.css';
 import Main from './components/Main';
 import { Link,  IconButton, Card} from '@chakra-ui/react';
 import {StarIcon, ArrowUpIcon} from '@chakra-ui/icons';
-import { wrap } from 'module';
 
 
 // https://stackoverflow.com/questions/41956465/how-to-create-multiple-page-app-using-react
