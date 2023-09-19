@@ -14,6 +14,9 @@ import p4 from '../images/photo4.jpg';
 import p5 from '../images/photo5.jpg';
 import p6 from '../images/photo6.jpg';
 import p7 from '../images/photo7.jpg';
+import p8 from '../images/photo8.jpg';
+import p9 from '../images/photo9.jpg';
+import p10 from '../images/photo10.jpg';
 import ImageComponent from '../components/ImageComponent';
 
 const Hobbies = () => {
@@ -64,14 +67,17 @@ const Hobbies = () => {
               <ImageComponent src={p1} title="Rock Stack" description="Taken in panorama resort"/>
               <ImageComponent src={p2} title="River" description="Experimenting with low shots"/>
               <ImageComponent src={p3} title="Water" description="Experimenting with fast shutter speed"/>
+              <ImageComponent src={p10} title="Birthday Aurora 1" description="Taken 2023-05-06"/>
             </VStack>
             <VStack>
               <ImageComponent src={p4} title="Fog" description="Mountain fog after rain"/>
               <ImageComponent src={p5} title="Flowing Water" description="Experimenting with long exposure"/>
+              <ImageComponent src={p9} title="Birthday Aurora 2" description="Very bright taken 2023-05-06"/>
             </VStack>
             <VStack>
               <ImageComponent src={p6} title="Star Trails" description="Experimenting with image layering"/>
               <ImageComponent src={p7} title="Star Trails 2" description="Added a lil crane :)"/>
+              <ImageComponent src={p8} title="Faint Aurora" description="Taken 2023-09-18"/>
             </VStack>
           </HStack>
         </Center>
