@@ -17,6 +17,7 @@ import p7 from '../images/photo7.jpg';
 import p8 from '../images/photo8.jpg';
 import p9 from '../images/photo9.jpg';
 import p10 from '../images/photo10.jpg';
+import p11 from '../images/photo11.jpg';
 import ImageComponent from '../components/ImageComponent';
 
 const Hobbies = () => {
@@ -77,7 +78,8 @@ const Hobbies = () => {
             <VStack>
               <ImageComponent src={p6} title="Star Trails" description="Experimenting with image layering"/>
               <ImageComponent src={p7} title="Star Trails 2" description="Added a lil crane :)"/>
-              <ImageComponent src={p8} title="Faint Aurora" description="Taken 2023-09-18"/>
+              <ImageComponent src={p8} title="Aurora 2" description="Taken 2023-09-18"/>
+              <ImageComponent src={p11} title="Aurora 3" description="Taken 2023-09-18"/>
             </VStack>
           </HStack>
         </Center>
