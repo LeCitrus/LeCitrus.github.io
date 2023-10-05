@@ -38,6 +38,7 @@ const Home = () => {
         <Link href="https://github.com/LeCitrus">Github</Link>
         <Link href="https://www.linkedin.com/in/curtis-kan-33446a1b3/">Linkedin</Link>
         <Link href="mailto:curtis.tl.kan@gmail.com">Gmail</Link>
+        <Link href="https://devpost.com/ctkan?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Devpost</Link>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Button size='md' onClick={toggleColorMode} _hover={{size: '5xl'}}>
           {colorMode === "light" ? "Whimsical" : "Silliness"}
