@@ -6,6 +6,7 @@ import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
 import Clover from '../images/clover top.jpg';
+import Jellyfish from '../images/jellyfish.jpg';
 import Hex from '../images/hex top.jpg';
 import p1 from '../images/photo1.jpg';
 import p2 from '../images/photo2.jpg';
@@ -18,6 +19,8 @@ import p8 from '../images/photo8.jpg';
 import p9 from '../images/photo9.jpg';
 import p10 from '../images/photo10.jpg';
 import p11 from '../images/photo11.jpg';
+import p12 from '../images/photo12.jpg';
+import p13 from '../images/photo13.jpg';
 import ImageComponent from '../components/ImageComponent';
 
 const Hobbies = () => {
@@ -53,6 +56,7 @@ const Hobbies = () => {
             </VStack>
             <VStack>
               <Origami image_src={Hex} title="Hexagonal Tesselation" author="Eric Gjerde" description="Folded with 25x25 kami paper"/>
+              <Origami image_src={Jellyfish} title="Jellyfish" author="Chris Heynen" description="Folded with 30x30cm tissue foil paper"/>
             </VStack>
             </HStack>
         </Center>
@@ -69,11 +73,13 @@ const Hobbies = () => {
               <ImageComponent src={p2} title="River" description="Experimenting with low shots"/>
               <ImageComponent src={p3} title="Water" description="Experimenting with fast shutter speed"/>
               <ImageComponent src={p10} title="Birthday Aurora 1" description="Taken 2023-05-06"/>
+              <ImageComponent src={p12} title="Midnight Fog" description="Taken 2023-11-05"/>
             </VStack>
             <VStack>
               <ImageComponent src={p4} title="Fog" description="Mountain fog after rain"/>
               <ImageComponent src={p5} title="Flowing Water" description="Experimenting with long exposure"/>
-              <ImageComponent src={p9} title="Birthday Aurora 2" description="Very bright taken 2023-05-06"/>
+              <ImageComponent src={p9} title="Birthday Aurora 2" description="Taken 2023-05-06"/>
+              <ImageComponent src={p13} title="Midnight Fog 2" description="Taken 2023-11-05"/>
             </VStack>
             <VStack>
               <ImageComponent src={p6} title="Star Trails" description="Experimenting with image layering"/>
