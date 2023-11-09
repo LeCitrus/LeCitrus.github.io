@@ -4,6 +4,7 @@ import SubHeader from "../components/subheader"
 import Blog from "../components/Blog"
 import {Card, Center, Text} from "@chakra-ui/react";
 import HandStand from "../components/Handstand";
+import { motion } from 'framer-motion';
 
 const startrails = `My latest photography focus has been photographing star trails! I've always loved having night scenery desktop backgrounds.
 I don't have any of those huge chonker cameras, but I found some tutorials on YouTube to film using a GoPro 10, which I had gotten
@@ -25,7 +26,7 @@ when there is no space to reorganize things. Unfortunately, this is not my basem
 
 const About = () => {
   return (
-  <div>
+  <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <div className="App">
       <Header title="About me"/>
     </div>
@@ -49,7 +50,7 @@ const About = () => {
     <SubHeader title="Blog"/>
     <Blog title="Startrails" content={startrails}></Blog>
     <Blog title="House cleaning" content={housecleaning}></Blog>
-  </div>
+  </motion.div>
   );
 };
   

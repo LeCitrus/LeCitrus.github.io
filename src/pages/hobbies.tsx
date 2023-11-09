@@ -1,7 +1,7 @@
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Origami from '../components/Origami';
-import {Text, Link, VStack, HStack, Box} from '@chakra-ui/react';
+import {Text, VStack, HStack, Box} from '@chakra-ui/react';
 import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
@@ -22,11 +22,20 @@ import p11 from '../images/photo11.jpg';
 import p12 from '../images/photo12.jpg';
 import p13 from '../images/photo13.jpg';
 import ImageComponent from '../components/ImageComponent';
+import { motion } from 'framer-motion';
 
 const Hobbies = () => {
 
+    function scroll(element: any) {
+      document.getElementById(element).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+
     return (
-    <div>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <div className="App">
         <Header title="Hobbies"/>
       </div>
@@ -34,8 +43,8 @@ const Hobbies = () => {
         <NavBar/>
       </div>
       <VStack alignItems="left" >
-      <Link href="#origami" fontSize={22}>Origami</Link>
-      <Link href="#photography" fontSize={22}>Photography</Link>
+      <Text onClick={() => scroll('origami')}fontSize={22}>Origami</Text>
+      <Text onClick={() => scroll('photography')} fontSize={22}>Photography</Text>
       </VStack>
       <div>
         <VStack>
@@ -83,7 +92,7 @@ const Hobbies = () => {
           </HStack>
         </VStack>
       </div>
-    </div>
+    </motion.div>
     );
   };
     

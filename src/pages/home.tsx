@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Resume from '../images/resume.jpg';
 import ImageComponent from '../components/ImageComponent';
 import {useState, useEffect} from 'react';
+import { motion } from 'framer-motion';
 
 const Home = () => {
 
@@ -32,7 +33,7 @@ const Home = () => {
     };
     
     return (
-    <div>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <div className="App">
       <Header title="Curtis Kan"/>
     </div>
@@ -75,7 +76,7 @@ const Home = () => {
         <Text>{count}</Text>
         <ImageComponent src={Resume} title="Resume" description = ""></ImageComponent>
     </VStack>
-    </div>
+    </motion.div>
     );
   };
     

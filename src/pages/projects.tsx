@@ -1,20 +1,30 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Project from "../components/Project";
-import { SimpleGrid, Text, VStack, Link, Box} from "@chakra-ui/react";
+import { SimpleGrid, Text, VStack, Box} from "@chakra-ui/react";
+import { motion } from 'framer-motion';
 
 const Projects = () => {
+
+  function scroll(element: any) {
+    document.getElementById(element).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+
   return (
-  <div>
+  <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <div className="App">
       <Header title="Projects"/>
     </div>
     <div>
       <NavBar/>
       <VStack alignItems="left" >
-        <Link href="#hackathon" fontSize={22}>Hackathon Projects</Link>
-        <Link href="#course" fontSize={22}>Course Projects</Link>
-        <Link href="#personal" fontSize={22}>Personal projects</Link>
+      <Text onClick={() => scroll('hackathon')} fontSize={22}>Hackathon Projects</Text>
+      <Text onClick={() => scroll('course')} fontSize={22}>Course Projects</Text>
+      <Text onClick={() => scroll('personal')} fontSize={22}>Personal Projects</Text>
       </VStack>
       <VStack>
         <Text fontSize='5xl' m={5} id="hackathon">Hackathon Projects</Text>
@@ -37,7 +47,7 @@ const Projects = () => {
         </SimpleGrid>
       </VStack>
     </div>
-  </div>
+  </motion.div>
   );
 };
   
