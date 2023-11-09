@@ -1,7 +1,7 @@
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Origami from '../components/Origami';
-import {SimpleGrid, Text, Center, Link, VStack, HStack} from '@chakra-ui/react';
+import {Text, Link, VStack, HStack, Box} from '@chakra-ui/react';
 import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
@@ -38,13 +38,9 @@ const Hobbies = () => {
       <Link href="#photography" fontSize={22}>Photography</Link>
       </VStack>
       <div>
-        <Center>
+        <VStack>
           <Text fontSize='4xl' id="origami">Origami</Text>
-        </Center>
-        <Center m={5}>
-          <Text fontSize='2xl'>"The Japanese art of folding paper into decorative shapes and figures." here are some of my creations!</Text>
-        </Center>
-        <Center>
+          <Text fontSize='2xl' padding="20px">"The Japanese art of folding paper into decorative shapes and figures." here are some of my creations!</Text>
           <HStack spacing='15px' margin='5px' alignItems="top">
             <VStack>
               <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn" description="Folded with 30x30cm tissue foil paper"/>
@@ -59,14 +55,11 @@ const Hobbies = () => {
               <Origami image_src={Jellyfish} title="Jellyfish" author="Chris Heynen" description="Folded with 30x30cm tissue foil paper"/>
             </VStack>
             </HStack>
-        </Center>
-        <Center>
+        </VStack>
+        <VStack>
+          <Box bg="white" width="1000px" height='2px' margin='10'/>
           <Text id='photography' fontSize='4xl' mt={10}>Photography</Text>
-        </Center>
-        <Center>
-          <Text fontSize='2xl' m={5}>I like to take pictures sometimes!</Text>
-        </Center>
-        <Center>
+          <Text fontSize='2xl' padding='20px'>I like to take pictures sometimes!</Text>
           <HStack spacing='15px' margin="5px" alignItems="top">
             <VStack>
               <ImageComponent src={p1} title="Rock Stack" description="Taken in panorama resort"/>
@@ -88,7 +81,7 @@ const Hobbies = () => {
               <ImageComponent src={p11} title="Aurora 3" description="Taken 2023-09-18"/>
             </VStack>
           </HStack>
-        </Center>
+        </VStack>
       </div>
     </div>
     );
