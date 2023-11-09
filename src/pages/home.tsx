@@ -1,5 +1,7 @@
 import NavBar from '../components/NavBar';
-import {Button, useColorMode, ColorModeScript, useTheme, Link, Text, VStack} from "@chakra-ui/react";
+import {Button, useColorMode, ColorModeScript, useTheme, Text, VStack, HStack, Card, Center} from "@chakra-ui/react";
+import {AiFillGithub, AiOutlineMail, AiFillLinkedin} from 'react-icons/ai';
+import {SiDevpost} from 'react-icons/si'
 import Header from '../components/Header';
 import Resume from '../images/resume.jpg';
 import ImageComponent from '../components/ImageComponent';
@@ -22,8 +24,12 @@ const Home = () => {
         localStorage.setItem("count", String(newCount));
         return newCount;
       });
-
     }
+
+    function clickLink(link: string) {
+      window.open(link);
+      return;
+    };
     
     return (
     <div>
@@ -35,10 +41,32 @@ const Home = () => {
     </div>
     <VStack>
         <Text fontSize='5xl'>Welcome!</Text>
-        <Link href="https://github.com/LeCitrus">Github</Link>
-        <Link href="https://www.linkedin.com/in/curtis-kan-33446a1b3/">Linkedin</Link>
-        <Link href="mailto:curtis.tl.kan@gmail.com">Gmail</Link>
-        <Link href="https://devpost.com/ctkan?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Devpost</Link>
+        <HStack spacing={10} padding={4}>
+          <Card padding={8} borderColor="white" variant="outline" _hover={{bg: 'green'}} onClick={() => clickLink('https://github.com/LeCitrus')}>
+              <VStack>
+              <AiFillGithub size={60}/>
+              <Text>Github</Text>
+              </VStack>
+          </Card>
+          <Card padding={8} borderColor="white" variant="outline" _hover={{bg: 'green'}} onClick={() => clickLink('https://devpost.com/ctkan')}>
+              <VStack>
+              <SiDevpost size={60}/>
+              <Text>Devpost</Text>
+              </VStack>
+          </Card>
+          <Card padding={8} borderColor="white" variant="outline" _hover={{bg: 'green'}} onClick={() => clickLink('https://www.linkedin.com/in/curtis-kan-33446a1b3/')}>
+              <VStack>
+              <AiFillLinkedin size={60}/>
+              <Text>Linkedin</Text>
+              </VStack>
+          </Card>
+          <Card padding={8} borderColor="white" variant="outline" _hover={{bg: 'green'}} onClick={() => clickLink('mailto:curtis.tl.kan@gmail.com')}>
+              <VStack>
+              <AiOutlineMail size={60}/>
+              <Text>Gmail</Text>
+              </VStack>
+          </Card>
+        </HStack>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Button size='md' onClick={toggleColorMode} _hover={{size: '5xl'}}>
           {colorMode === "light" ? "Whimsical" : "Silliness"}
