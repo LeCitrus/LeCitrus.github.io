@@ -39,15 +39,14 @@ const Hobbies = () => {
       <div className="App">
         <Header title="Hobbies"/>
       </div>
-      <div>
+      <div style={{overflow: 'hidden'}}>
         <NavBar/>
-      </div>
       <VStack alignItems="left" >
-      <Text onClick={() => scroll('origami')} fontSize={22}  _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
-    transitionDuration: '0.2s',
+      <Text onClick={() => scroll('origami')} fontSize={22}  _hover={{color: 'red', transform: 'translateX(15px)',
+    transitionDuration: '0.3s',
     transitionTimingFunction: "ease-in-out"}}>Origami</Text>
-      <Text onClick={() => scroll('photography')} fontSize={22}  _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
-    transitionDuration: '0.2s',
+      <Text onClick={() => scroll('photography')} fontSize={22}  _hover={{color: 'red', transform: 'translateX(15px)',
+    transitionDuration: '0.3s',
     transitionTimingFunction: "ease-in-out"}}>Photography</Text>
       </VStack>
       <div>
@@ -96,6 +95,7 @@ const Hobbies = () => {
           </HStack>
         </VStack>
       </div>
+    </div>
     </motion.div>
     );
   };

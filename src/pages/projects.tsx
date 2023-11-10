@@ -19,17 +19,17 @@ const Projects = () => {
     <div className="App">
       <Header title="Projects"/>
     </div>
-    <div>
+    <div style={{overflow: 'hidden'}}>
       <NavBar/>
-      <VStack alignItems="left" >
-      <Text onClick={() => scroll('hackathon')} fontSize={22} _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
-    transitionDuration: '0.2s',
+      <VStack alignItems="left">
+      <Text onClick={() => scroll('hackathon')} fontSize={22} _hover={{color: 'red', transform: 'translateX(15px)',
+    transitionDuration: '0.3s',
     transitionTimingFunction: "ease-in-out"}}>Hackathon Projects</Text>
-      <Text onClick={() => scroll('course')} fontSize={22} _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
-    transitionDuration: '0.2s',
+      <Text onClick={() => scroll('course')} fontSize={22} _hover={{color: 'red', transform: 'translateX(15px)',
+    transitionDuration: '0.3s',
     transitionTimingFunction: "ease-in-out"}}>Course Projects</Text>
-      <Text onClick={() => scroll('personal')} fontSize={22}  _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
-    transitionDuration: '0.2s',
+      <Text onClick={() => scroll('personal')} fontSize={22}  _hover={{color: 'red', transform: 'translateX(15px)',
+    transitionDuration: '0.3s',
     transitionTimingFunction: "ease-in-out"}}>Personal Projects</Text>
       </VStack>
       <VStack>
