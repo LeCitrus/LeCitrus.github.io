@@ -22,9 +22,15 @@ const Projects = () => {
     <div>
       <NavBar/>
       <VStack alignItems="left" >
-      <Text onClick={() => scroll('hackathon')} fontSize={22}>Hackathon Projects</Text>
-      <Text onClick={() => scroll('course')} fontSize={22}>Course Projects</Text>
-      <Text onClick={() => scroll('personal')} fontSize={22}>Personal Projects</Text>
+      <Text onClick={() => scroll('hackathon')} fontSize={22} _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: "ease-in-out"}}>Hackathon Projects</Text>
+      <Text onClick={() => scroll('course')} fontSize={22} _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: "ease-in-out"}}>Course Projects</Text>
+      <Text onClick={() => scroll('personal')} fontSize={22}  _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: "ease-in-out"}}>Personal Projects</Text>
       </VStack>
       <VStack>
         <Text fontSize='5xl' m={5} id="hackathon">Hackathon Projects</Text>

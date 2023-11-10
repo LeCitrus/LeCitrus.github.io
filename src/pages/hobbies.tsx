@@ -43,8 +43,12 @@ const Hobbies = () => {
         <NavBar/>
       </div>
       <VStack alignItems="left" >
-      <Text onClick={() => scroll('origami')}fontSize={22}>Origami</Text>
-      <Text onClick={() => scroll('photography')} fontSize={22}>Photography</Text>
+      <Text onClick={() => scroll('origami')} fontSize={22}  _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: "ease-in-out"}}>Origami</Text>
+      <Text onClick={() => scroll('photography')} fontSize={22}  _hover={{color: 'red', fontSize: 23, transform: 'translateY(-5px)',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: "ease-in-out"}}>Photography</Text>
       </VStack>
       <div>
         <VStack>
