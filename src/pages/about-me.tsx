@@ -1,10 +1,12 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
-import SubHeader from "../components/subheader"
+import SubHeader from '../components/subheader';
 import Blog from "../components/Blog"
 import {Card, Center, Text} from "@chakra-ui/react";
 import HandStand from "../components/Handstand";
 import { motion } from 'framer-motion';
+import { useColorMode } from "@chakra-ui/react"
+
 
 const startrails = `My latest photography focus has been photographing star trails! I've always loved having night scenery desktop backgrounds.
 I don't have any of those huge chonker cameras, but I found some tutorials on YouTube to film using a GoPro 10, which I had gotten
@@ -16,7 +18,7 @@ StarStax, I overlayed all the photos into 1 photo, giving me the amazing photos 
 Anyways, here is what I learned from my 4 days of filmin' stars: `
 
 const housecleaning = `I was jobless and sad in the Summer of 2023, so I decided to take on a doomed task: 
-cleaning my basement. Asian household basements are like Smaug's lair, except everything is mostly musty cardboard boxes,
+cleaning my basement. Asian household basements are like Smaug's lair, except the treasure is mostly musty cardboard boxes,
 expired hand sanitizer, and ancient relics. You would think cleaning is just tedious and that there is no skill involved, but
 after 3 months of suffering, I beg to differ. There is an art to house cleaning. The urge to clean my basement started when
 I was trying to handstand surrounded by old furniture. I ended up smashing my toe into the corner of a couch. 
@@ -25,6 +27,7 @@ when there is no space to reorganize things. Unfortunately, this is not my basem
 
 
 const About = () => {
+  const {colorMode, toggleColorMode} = useColorMode();
   return (
   <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <div className="App">
@@ -32,13 +35,13 @@ const About = () => {
     </div>
     <NavBar/>
     <Center>
-      <Card borderRadius='lg' bg="black" p={10} borderColor="white" variant="outline">
+      <Card borderRadius='lg' bg={colorMode === "dark" ? "black" : "white"} p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
         <Text>I am in my 4th year of a Specialization CS degree - Business Minor at the University of Alberta.</Text>
       </Card>
     </Center>
     <SubHeader title="What am I learning right now?"/>
     <Center>
-      <Card borderRadius='lg' bg="black" p={10} borderColor="white" variant="outline">
+      <Card borderRadius='lg' bg={colorMode === "dark" ? "black" : "white"} p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
           <ul>
             <li>Mobile app development using <strong>Flutter</strong></li>
             <li>UI/UX Designing using <strong>Figma</strong></li>
@@ -48,9 +51,9 @@ const About = () => {
       </Card>
     </Center>
     <SubHeader title="Blog"/>
-    <Blog title="Startrails" content={startrails}></Blog>
-    <Blog title="House cleaning" content={housecleaning}></Blog>
-  </motion.div>
+    <Blog title="Startrails" content={startrails} color={colorMode === "dark" ? "black" : "white"}></Blog>
+    <Blog title="House cleaning" content={housecleaning} color={colorMode === "dark" ? "black" : "white"}></Blog>
+   </motion.div>
   );
 };
   

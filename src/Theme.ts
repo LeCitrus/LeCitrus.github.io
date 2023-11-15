@@ -2,7 +2,7 @@ import {extendTheme} from '@chakra-ui/react';
 import {mode} from '@chakra-ui/theme-tools';
 
 const dark = "#282C34";
-const light = "#4A412A";
+const light = "FFFFFF";
 
 const config = {
     initialColorMode: 'dark',
@@ -28,7 +28,7 @@ const theme = extendTheme({
         global: (props)  => ({
             body: {
                 bg: mode(light, dark)(props),
-                color: mode('red', 'white')(props),
+                color: mode('black', 'white')(props),
             }
         
         })

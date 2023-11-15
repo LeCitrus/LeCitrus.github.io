@@ -35,21 +35,21 @@ const Projects = () => {
       <VStack>
         <Text fontSize='5xl' m={5} id="hackathon">Hackathon Projects</Text>
         <SimpleGrid columns = {3} spacing = {10} paddingBottom='10'>
-          <Project title="Imposter Detector" link="https://imposter-detector.vercel.app/"/>
-          <Project title="Math GPT" link="https://arithme.tech/"/>
-          <Project title="Lost and Coffee (repo)" link="https://github.com/LeCitrus/Lost-and-Coffee"/>
+          <Project title="Imposter Detector" link="https://imposter-detector.vercel.app/" description="modifies sound files to inject vine boom sound effects" skills={['react', 'chakra-ui', 'mp3']}/>
+          <Project title="Math GPT" link="https://arithme.tech/" description="reads latex equations and uses GPT to return the solution" skills={['react', 'api', 'chakra-ui']} />
+          <Project title="Lost and Coffee (repo)" link="https://github.com/LeCitrus/Lost-and-Coffee" description="submission for GameJam 2021" skills={['gamemaker']}/>
         </SimpleGrid>
         <Box bg="white" width="1000px" height='2px' margin='10px'/>
         <Text fontSize='5xl' m={5} id="course">Course projects</Text>
         <SimpleGrid columns = {2} spacing = {10} paddingBottom='10'>
-          <Project title="AndroidImpact (repo)" link="https://github.com/CMPUT301F22T08/AndroidImpact"/>
-          <Project title="Movie Database With Pymongo (repo)" link="https://github.com/LeCitrus/CMPUT291-Mini-Project-2"/>
+          <Project title="AndroidImpact (repo)" link="https://github.com/CMPUT301F22T08/AndroidImpact" description="foodstuffs tracking app" skills={['agile', 'android', 'java']}/>
+          <Project title="Movie Database With Pymongo (repo)" link="https://github.com/LeCitrus/CMPUT291-Mini-Project-2" description="movie search using pymongo" skills={['pymongo']}/>
         </SimpleGrid>
         <Box bg="white" width="1000px" height='2px' margin='10'/>
         <Text fontSize='5xl' m={5} id="personal">Personal projects</Text>
         <SimpleGrid columns = {2} spacing = {10}>
-          <Project title="Fish Game (JS)" link="https://github.com/LeCitrus/Fish-Game-JS"/>
-          <Project title="Exercise Tracker" link="https://github.com/LeCitrus/Exercise-Tracker"/>
+          <Project title="Fish Game (repo)" link="https://github.com/LeCitrus/Fish-Game-JS" description="replication of rowing machine fish game" skills={['javascript', 'html']}/>
+          <Project title="Exercise Tracker (repo)" link="https://github.com/LeCitrus/Exercise-Tracker" description="mobile app to track exercises" skills={['flutter']}/>
         </SimpleGrid>
       </VStack>
     </div>
