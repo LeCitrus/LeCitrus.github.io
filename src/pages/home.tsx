@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar';
-import {Button, useColorMode, ColorModeScript, useTheme, Text, VStack, HStack, Card, Center} from "@chakra-ui/react";
+import {Button, useColorMode, ColorModeScript, useTheme, Text, VStack, HStack, Card, Image} from "@chakra-ui/react";
 import {AiFillGithub, AiOutlineMail, AiFillLinkedin} from 'react-icons/ai';
+import { IoReload } from "react-icons/io5";
 import {SiDevpost} from 'react-icons/si'
 import Header from '../components/Header';
 import Resume from '../images/resume.jpg';
@@ -16,7 +17,7 @@ const Home = () => {
 
     const [lat, setLat] = useState(0);
     const [long, setLong] = useState(0);
-    const [weatherData, setWeatherData] = useState([]);
+    const [weatherData, setWeatherData] = useState<any>([]);
 
     useEffect(() => {
       const initialValue = localStorage.getItem("count");
@@ -25,16 +26,13 @@ const Home = () => {
       navigator.geolocation.getCurrentPosition(function(position) {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
-        console.log(lat, long);
       });
 
       async function fetchMyAPI() {
-        console.log(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`);
         await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
         .then(res => res.json())
         .then(result => {
           setWeatherData(result)
-          console.log(weatherData);
         });
       }
       fetchMyAPI();
@@ -96,6 +94,18 @@ const Home = () => {
         <Button size='md' onClick={toggleColorMode} _hover={{size: '5xl'}}>
           {colorMode === "light" ? "Dark Mode" : "Light Mode"}
         </Button>
+        <Card padding={5}>
+          <VStack>
+          <Text fontSize='3xl'>What's the weather like?</Text>
+          {weatherData.weather !== undefined ? <>
+            <Text>{weatherData.weather[0]?.main}</Text>
+            <Text>{weatherData.weather[0]?.description}</Text>
+            <Image src={`https://openweathermap.org/img/wn/${weatherData.weather[0]?.icon}@2x.png`}></Image>
+            </> : <Text>Weather data not available</Text>
+          }
+          <IoReload size={20} onClick={() => window.location.reload()}></IoReload>
+          </VStack>
+        </Card>
         <Button onClick={() => increment()}>Cookie clicker</Button>
         <Text>{count}</Text>
         <ImageComponent src={Resume} title="Resume" description = ""></ImageComponent>
