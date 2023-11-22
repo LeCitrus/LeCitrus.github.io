@@ -1,7 +1,7 @@
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Origami from '../components/Origami';
-import {Text, VStack, HStack, Box} from '@chakra-ui/react';
+import {Text, VStack, HStack, Box, Link} from '@chakra-ui/react';
 import Eiffel from '../images/eiffel.jpg';
 import Spring from '../images/spring.jpg';
 import Echidna from '../images/echidna.jpg';
@@ -23,16 +23,21 @@ import p12 from '../images/photo12.jpg';
 import p13 from '../images/photo13.jpg';
 import ImageComponent from '../components/ImageComponent';
 import { motion } from 'framer-motion';
+import origami_video from '../videos/origami4.mp4';
+import lapse from '../videos/lapse.mp4';
+import startrails from '../videos/startrails3.mp4';
+
 
 const Hobbies = () => {
 
     function scroll(element: any) {
-      document.getElementById(element).scrollIntoView({
+      document.getElementById(element)?.scrollIntoView({
         behavior: "smooth",
         block: "start",
         inline: "nearest"
       });
     }
+
 
     return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
@@ -53,6 +58,8 @@ const Hobbies = () => {
         <VStack>
           <Text fontSize='4xl' id="origami">Origami</Text>
           <Text fontSize='2xl' padding="20px">"The Japanese art of folding paper into decorative shapes and figures." here are some of my creations!</Text>
+          <Link href='https://www.youtube.com/channel/UCRbbpFVTDU-a4ebJ9rgK6Mw' isExternal={true}>Check out my youtube!</Link>
+          <video width="200" controls src={origami_video}/>
           <HStack spacing='15px' margin='5px' alignItems="top">
             <VStack>
               <Origami image_src={Eiffel} title="Eiffel Tower" author="Robin Glynn" description="Folded with 30x30cm tissue foil paper"/>
@@ -79,6 +86,7 @@ const Hobbies = () => {
               <ImageComponent src={p3} title="Water" description="Experimenting with fast shutter speed"/>
               <ImageComponent src={p10} title="Birthday Aurora 1" description="Taken 2023-05-06"/>
               <ImageComponent src={p12} title="Midnight Fog" description="Taken 2023-11-05"/>
+              <video controls src={lapse}/>
             </VStack>
             <VStack>
               <ImageComponent src={p4} title="Fog" description="Mountain fog after rain"/>
@@ -91,6 +99,7 @@ const Hobbies = () => {
               <ImageComponent src={p7} title="Star Trails 2" description="Added a lil crane :)"/>
               <ImageComponent src={p8} title="Aurora 2" description="Taken 2023-09-18"/>
               <ImageComponent src={p11} title="Aurora 3" description="Taken 2023-09-18"/>
+              <video controls src={startrails}/>
             </VStack>
           </HStack>
         </VStack>
