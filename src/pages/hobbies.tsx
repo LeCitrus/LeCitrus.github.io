@@ -26,6 +26,7 @@ import { motion } from 'framer-motion';
 import origami_video from '../videos/origami4.mp4';
 import lapse from '../videos/lapse.mp4';
 import startrails from '../videos/startrails3.mp4';
+import aurora from '../videos/aurora.mp4';
 
 
 const Hobbies = () => {
@@ -92,6 +93,7 @@ const Hobbies = () => {
               <ImageComponent src={p4} title="Fog" description="Mountain fog after rain"/>
               <ImageComponent src={p5} title="Flowing Water" description="Experimenting with long exposure"/>
               <ImageComponent src={p9} title="Birthday Aurora 2" description="Taken 2023-05-06"/>
+              <video controls src={aurora}/>
               <ImageComponent src={p13} title="Midnight Fog 2" description="Taken 2023-11-05"/>
             </VStack>
             <VStack>
