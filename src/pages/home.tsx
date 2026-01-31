@@ -59,9 +59,7 @@ const Home = () => {
     <div className="App">
       <Header title="Curtis Kan"/>
     </div>
-    <div className="Navbar">
-      <NavBar/>
-    </div>
+    <NavBar/>
     <VStack>
         <Text fontSize='5xl'>Welcome!</Text>
         <HStack spacing={10} padding={4}>

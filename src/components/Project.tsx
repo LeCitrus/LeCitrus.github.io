@@ -12,7 +12,13 @@ const Project  = ({
     };
 
     return (
-        <Card padding={6} borderColor={colorMode === 'dark'? 'white' : 'black'} variant="outline" _hover={{bg: colorMode === 'dark'? 'green' : 'gray'}} onClick={() => handleClick(link)}>
+        <Card 
+            padding={6}
+            borderColor={colorMode === 'dark'? 'white' : 'black'}
+            variant="outline"
+            transition="all 0.5s ease-in-out"
+            _hover={{bg: colorMode === 'dark'? 'green' : 'gray' , transform: "translateY(-4px)"}}
+            onClick={() => handleClick(link)}>
             <Center>
                 <VStack>
                 <Text fontSize='3xl' fontWeight='bold'>

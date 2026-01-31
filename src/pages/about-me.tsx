@@ -36,7 +36,7 @@ const About = () => {
     <NavBar/>
     <Center>
       <Card borderRadius='lg' bg={colorMode === "dark" ? "black" : "white"} p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
-        <Text>I am in my 4th year of a Specialization CS degree - Business Minor at the University of Alberta.</Text>
+        <Text>I completed my Specialization CS degree with a Business Minor at the University of Alberta in 2025.</Text>
       </Card>
     </Center>
     <SubHeader title="What am I learning right now?"/>
