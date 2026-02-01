@@ -7,6 +7,7 @@ import {
   Text,
   SimpleGrid,
   Image,
+  Grid,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { certifications, CertificationLevel } from "../data/certifications";
@@ -33,27 +34,44 @@ const Certifications = () => {
 
       <div style={{ overflow: "hidden" }}>
         <NavBar />
-
         <VStack align="start" px={{ base: 6, md: 24 }} spacing={12} mt={10}>
-          
+          <Text fontSize='5xl'>Microsoft</Text>
+
           {/* Fundamentals */}
           <Box w="100%">
-            <VStack align="start" spacing={4}>
-              <Image src={fundamentalsLogo} alt="Fundamentals" height="80px" />
-              <Text fontSize="4xl">Fundamentals</Text>
+            <Grid
+              templateColumns={{ base: "1fr", md: "200px 1fr" }}
+              gap={6}
+              alignItems="center"
+            >
+              <Image
+                src={fundamentalsLogo}
+                alt="Fundamentals"
+                height="160px"
+                objectFit="contain"
+              />
+
               {renderCerts("fundamental")}
-            </VStack>
+            </Grid>
           </Box>
 
           {/* Associate */}
           <Box w="100%">
-            <VStack align="start" spacing={4}>
-              <Image src={associateLogo} alt="Associate" height="80px" />
-              <Text fontSize="4xl">Associate</Text>
-              {renderCerts("associate")}
-            </VStack>
-          </Box>
+            <Grid
+              templateColumns={{ base: "1fr", md: "200px 1fr" }}
+              gap={6}
+              alignItems="center"
+            >
+              <Image
+                src={associateLogo}
+                alt="Associate"
+                height="160px"
+                objectFit="contain"
+              />
 
+              {renderCerts("associate")}
+            </Grid>
+          </Box>
         </VStack>
       </div>
     </motion.div>

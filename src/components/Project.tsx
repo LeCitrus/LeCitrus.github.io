@@ -17,7 +17,7 @@ const Project  = ({
             borderColor={colorMode === 'dark'? 'white' : 'black'}
             variant="outline"
             transition="all 0.5s ease-in-out"
-            _hover={{bg: colorMode === 'dark'? 'green' : 'gray' , transform: "translateY(-4px)"}}
+            _hover={{bg: colorMode === 'dark'? 'green' : 'gray' , transform: "translateY(-4px)", cursor: "pointer"}}
             onClick={() => handleClick(link)}>
             <Center>
                 <VStack>
