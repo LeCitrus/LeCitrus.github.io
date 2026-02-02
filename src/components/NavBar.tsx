@@ -38,6 +38,16 @@ const NavBar = () => {
           LeCitrus
         </Link>
 
+           <Link
+          as={ReachLink}
+          to="/projects"
+          fontWeight="bold"
+          textDecoration="none"
+          _hover={linkHoverStyles}
+        >
+          Projects
+        </Link>
+
         <Link
           as={ReachLink}
           to="/certifications"
@@ -56,16 +66,6 @@ const NavBar = () => {
           _hover={linkHoverStyles}
         >
           About me
-        </Link>
-
-        <Link
-          as={ReachLink}
-          to="/projects"
-          fontWeight="bold"
-          textDecoration="none"
-          _hover={linkHoverStyles}
-        >
-          Projects
         </Link>
 
         <Link
