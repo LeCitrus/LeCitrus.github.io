@@ -18,7 +18,7 @@ const SocialCard = ({ icon, label, link, onClick }: Props) => {
       borderColor={colorMode === "dark" ? "white" : "black"}
       variant="outline"
       transition="all 0.2s ease-in-out"
-      _hover={{ bg: colorMode === "dark" ? "green" : "gray", cursor: "pointer" }}
+      _hover={{bg: colorMode === 'dark'? 'green' : 'gray' , transform: "translateY(-4px)", cursor: "pointer"}}
       onClick={() => onClick(link)}
     >
       <VStack spacing={3}>
