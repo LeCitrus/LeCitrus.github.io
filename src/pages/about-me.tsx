@@ -17,13 +17,13 @@ const About = () => {
     </div>
     <NavBar/>
     <Center>
-      <Card borderRadius='lg' bg={colorMode === "dark" ? "black" : "white"} p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
+      <Card borderRadius='lg' p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
         <Text>I completed my Specialization CS degree with a Business Minor at the University of Alberta in 2025.</Text>
       </Card>
     </Center>
     <SubHeader title="What am I learning right now?"/>
     <Center>
-      <Card borderRadius='lg' bg={colorMode === "dark" ? "black" : "white"} p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
+      <Card borderRadius='lg' p={10} borderColor={colorMode === "dark" ? "white" : "black"} variant="outline">
           <ul>
             <li>Mobile app development using <strong>Flutter</strong></li>
             <li>UI/UX Designing using <strong>Figma</strong></li>
@@ -38,7 +38,6 @@ const About = () => {
         key={post.title}
         title={post.title}
         content={post.content}
-        color={colorMode === "dark" ? "black" : "white"}
         date={post.date}
       />
     ))}
