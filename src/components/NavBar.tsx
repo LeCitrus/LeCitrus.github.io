@@ -35,7 +35,7 @@ const NavBar = () => {
           textDecoration="none"
           _hover={linkHoverStyles}
         >
-          LeCitrus
+          Home
         </Link>
 
            <Link

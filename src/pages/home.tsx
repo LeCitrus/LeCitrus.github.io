@@ -94,9 +94,6 @@ const Home = () => {
           />
         </HStack>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <Button size='md' onClick={toggleColorMode} _hover={{size: '5xl'}}>
-          {colorMode === "light" ? "Dark Mode" : "Light Mode"}
-        </Button>
         <Card padding={5}>
           <VStack>
           <Text fontSize='3xl'>What's the weather like?</Text>

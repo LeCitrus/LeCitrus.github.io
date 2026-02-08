@@ -15,13 +15,22 @@ h1 {
 .footer {
   position: fixed;
   margin: auto;
-  bottom: 0;
+  bottom: 10px;
   width:100%;
   display: flex;
   justify-content: center;
 }
 
+.color-mode {
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  z-index: 9999;
+}
+
 .top {
   position: fixed;
-  bottom: 50px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
 }
