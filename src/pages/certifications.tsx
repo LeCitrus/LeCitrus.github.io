@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Certification from "../components/Certification";
 import {
   Box,
@@ -74,6 +75,7 @@ const Certifications = () => {
           </Box>
         </VStack>
       </div>
+    <Footer />
     </motion.div>
   );
 };

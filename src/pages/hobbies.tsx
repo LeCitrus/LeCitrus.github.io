@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Origami from '../components/Origami';
 import {Text, VStack, HStack, Box, Link} from '@chakra-ui/react';
 import { origamiPieces } from '../data/origami';
@@ -97,6 +98,7 @@ const Hobbies = () => {
         </VStack>
       </div>
     </div>
+    <Footer />
     </motion.div>
     );
   };

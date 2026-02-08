@@ -9,6 +9,7 @@ import Resume from '../images/resume.jpg';
 import ImageComponent from '../components/ImageComponent';
 import {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 const Home = () => {
 
@@ -112,6 +113,7 @@ const Home = () => {
         <Text>{count}</Text>
         <ImageComponent src={Resume} title="Resume" description = ""></ImageComponent>
     </VStack>
+    <Footer />
     </motion.div>
     );
   };

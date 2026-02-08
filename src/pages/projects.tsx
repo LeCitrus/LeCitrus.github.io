@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { SimpleGrid, Text, VStack, Box} from "@chakra-ui/react";
 import { motion } from 'framer-motion';
@@ -80,6 +81,7 @@ const Projects = () => {
         </Box>
       </VStack>
     </div>
+  <Footer />
   </motion.div>
   );
 };

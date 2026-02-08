@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import SubHeader from '../components/subheader';
 import Blog from "../components/Blog"
 import {Card, Center, Text} from "@chakra-ui/react";
@@ -41,6 +42,7 @@ const About = () => {
         date={post.date}
       />
     ))}
+   <Footer />
    </motion.div>
   );
 };
