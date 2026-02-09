@@ -10,7 +10,15 @@ const ImageComponent = ({
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-        <Image _hover={{ cursor: "pointer" }} src={src} onClick={onOpen}></Image>
+        <Image 
+            transition="transform 0.3s ease-in-out"
+            _hover={{ 
+                cursor: "pointer",
+                transform: "scale(1.02)"
+            }} 
+            src={src} 
+            onClick={onOpen}
+        />
         <Modal isOpen={isOpen} onClose={onClose} isCentered motionPreset='scale' size="5xl" scrollBehavior='inside'>
         <ModalOverlay />
         <ModalContent>

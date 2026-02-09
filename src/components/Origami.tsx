@@ -16,7 +16,8 @@ const Origami = ({
       borderColor={colorMode === "dark" ? "white" : "black"}
       variant="outline"
       alignItems="center"
-      _hover={{ transform: "scale(1.02)", transition: "transform 0.3s ease-in-out" }}
+      transition="transform 0.3s ease-in-out"
+      _hover={{ transform: "scale(1.02)" }}
     >
       <ImageComponent
         src={image_src}

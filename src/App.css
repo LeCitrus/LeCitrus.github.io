@@ -23,8 +23,8 @@ h1 {
 
 .color-mode {
   position: fixed;
-  bottom: 10px;
-  right: 50px;
+  top: 15px;
+  right: 20px;
   z-index: 9999;
 }
 
