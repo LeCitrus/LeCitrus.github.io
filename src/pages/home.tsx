@@ -8,8 +8,8 @@ import Header from '../components/Header';
 import Resume from '../images/resume.jpg';
 import ImageComponent from '../components/ImageComponent';
 import {useState, useEffect} from 'react';
-import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
+import PageTransition from '../components/PageTransition';
 
 const Home = () => {
 
@@ -57,61 +57,61 @@ const Home = () => {
     };
     
     return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-    <div className="App">
-      <Header title="Curtis Kan"/>
-    </div>
-    <NavBar/>
-    <VStack>
-        <Text fontSize='5xl'>Welcome!</Text>
-        <HStack spacing={10} padding={4}>
-          <SocialCard
-            icon={<AiFillGithub size={60} />}
-            label="GitHub"
-            link="https://github.com/LeCitrus"
-            onClick={clickLink}
-          />
+      <PageTransition>
+        <div className="App">
+          <Header title="Curtis Kan"/>
+        </div>
+        <NavBar/>
+        <VStack>
+            <Text fontSize='5xl'>Welcome!</Text>
+            <HStack spacing={10} padding={4}>
+              <SocialCard
+                icon={<AiFillGithub size={60} />}
+                label="GitHub"
+                link="https://github.com/LeCitrus"
+                onClick={clickLink}
+              />
 
-          <SocialCard
-            icon={<SiDevpost size={60} />}
-            label="Devpost"
-            link="https://devpost.com/ctkan"
-            onClick={clickLink}
-          />
+              <SocialCard
+                icon={<SiDevpost size={60} />}
+                label="Devpost"
+                link="https://devpost.com/ctkan"
+                onClick={clickLink}
+              />
 
-          <SocialCard
-            icon={<AiFillLinkedin size={60} />}
-            label="LinkedIn"
-            link="https://www.linkedin.com/in/curtis-kan-33446a1b3/"
-            onClick={clickLink}
-          />
+              <SocialCard
+                icon={<AiFillLinkedin size={60} />}
+                label="LinkedIn"
+                link="https://www.linkedin.com/in/curtis-kan-33446a1b3/"
+                onClick={clickLink}
+              />
 
-          <SocialCard
-            icon={<AiOutlineMail size={60} />}
-            label="Gmail"
-            link="mailto:curtis.tl.kan@gmail.com"
-            onClick={clickLink}
-          />
-        </HStack>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <Card padding={5}>
-          <VStack>
-          <Text fontSize='3xl'>What's the weather like?</Text>
-          {weatherData.weather !== undefined ? <>
-            <Text>{weatherData.weather[0]?.main}</Text>
-            <Text>{weatherData.weather[0]?.description}</Text>
-            <Image src={`https://openweathermap.org/img/wn/${weatherData.weather[0]?.icon}@2x.png`}></Image>
-            </> : <Text>Weather data not available</Text>
-          }
-          <IoReload size={20} onClick={() => window.location.reload()}></IoReload>
-          </VStack>
-        </Card>
-        <Button onClick={() => increment()}>Cookie clicker</Button>
-        <Text>{count}</Text>
-        <ImageComponent src={Resume} title="Resume" description = ""></ImageComponent>
-    </VStack>
-    <Footer />
-    </motion.div>
+              <SocialCard
+                icon={<AiOutlineMail size={60} />}
+                label="Gmail"
+                link="mailto:curtis.tl.kan@gmail.com"
+                onClick={clickLink}
+              />
+            </HStack>
+            <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+            <Card padding={5}>
+              <VStack>
+              <Text fontSize='3xl'>What's the weather like?</Text>
+              {weatherData.weather !== undefined ? <>
+                <Text>{weatherData.weather[0]?.main}</Text>
+                <Text>{weatherData.weather[0]?.description}</Text>
+                <Image src={`https://openweathermap.org/img/wn/${weatherData.weather[0]?.icon}@2x.png`}></Image>
+                </> : <Text>Weather data not available</Text>
+              }
+              <IoReload size={20} onClick={() => window.location.reload()}></IoReload>
+              </VStack>
+            </Card>
+            <Button onClick={() => increment()}>Cookie clicker</Button>
+            <Text>{count}</Text>
+            <ImageComponent src={Resume} title="Resume" description = ""></ImageComponent>
+        </VStack>
+        <Footer />
+      </PageTransition>
     );
   };
     

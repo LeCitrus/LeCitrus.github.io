@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { SimpleGrid, Text, VStack, Box} from "@chakra-ui/react";
-import { motion } from 'framer-motion';
+import PageTransition from "../components/PageTransition";
 import { projects, ProjectCategory } from "../data/projects";
 
 
@@ -31,7 +31,7 @@ const Projects = () => {
   );
 
   return (
-  <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+  <PageTransition>
     <div className="App">
       <Header title="Projects"/>
     </div>
@@ -82,7 +82,7 @@ const Projects = () => {
       </VStack>
     </div>
   <Footer />
-  </motion.div>
+  </PageTransition>
   );
 };
   

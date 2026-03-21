@@ -7,17 +7,16 @@ import Certifications from '../pages/certifications';
 import { AnimatePresence } from 'framer-motion';
 
 const Main = () => {
-
   const location = useLocation();
 
   return (
-    <AnimatePresence>
-      <Routes location={location} key={location.pathname}> {/* The Switch decides which component to show based on the current URL.*/}
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/about-me' element={<About/>}></Route>
-        <Route path='/hobbies' element={<Hobbies/>}></Route>
-        <Route path='/projects' element={<Projects/>}></Route>
-        <Route path='/certifications' element={<Certifications/>}></Route>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path='/' element={<Home />} />
+        <Route path='/about-me' element={<About />} />
+        <Route path='/hobbies' element={<Hobbies />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/certifications' element={<Certifications />} />
       </Routes>
     </AnimatePresence>
   );

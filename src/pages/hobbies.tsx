@@ -6,7 +6,7 @@ import {Text, VStack, HStack, Box, Link} from '@chakra-ui/react';
 import { origamiPieces } from '../data/origami';
 import { photos, videos} from '../data/photos';
 import ImageComponent from '../components/ImageComponent';
-import { motion } from 'framer-motion';
+import PageTransition from '../components/PageTransition';
 import origami_video from '../videos/origami4.mp4';
 
 
@@ -23,7 +23,7 @@ const Hobbies = () => {
 
 
     return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+    <PageTransition>
       <div className="App">
         <Header title="Hobbies"/>
       </div>
@@ -117,7 +117,7 @@ const Hobbies = () => {
         </VStack>
       </div>
     <Footer />
-    </motion.div>
+    </PageTransition>
     );
   };
     

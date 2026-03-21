@@ -10,11 +10,12 @@ import {
   Image,
   Grid,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { certifications, CertificationLevel } from "../data/certifications";
+import PageTransition from "../components/PageTransition";
 
 import fundamentalsLogo from "../images/ms-fundamentals.svg";
 import associateLogo from "../images/ms-associate.svg";
+import serviceNowLogo from "../images/servicenow-csa.png";
 
 const Certifications = () => {
   const renderCerts = (level: CertificationLevel) => (
@@ -28,7 +29,7 @@ const Certifications = () => {
   );
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <PageTransition>
       <div className="App">
         <Header title="Certifications" />
       </div>
@@ -36,7 +37,9 @@ const Certifications = () => {
       <div style={{ overflow: "hidden" }}>
         <NavBar />
         <VStack align="start" px={{ base: 6, md: 24 }} spacing={12} mt={10}>
-          <Text fontSize='5xl'>Microsoft</Text>
+
+          {/* Microsoft */}
+          <Text fontSize="5xl">Microsoft</Text>
 
           {/* Fundamentals */}
           <Box w="100%">
@@ -51,7 +54,6 @@ const Certifications = () => {
                 height="160px"
                 objectFit="contain"
               />
-
               {renderCerts("fundamental")}
             </Grid>
           </Box>
@@ -69,14 +71,33 @@ const Certifications = () => {
                 height="160px"
                 objectFit="contain"
               />
-
               {renderCerts("associate")}
             </Grid>
           </Box>
+
+          {/* ServiceNow */}
+          <Text fontSize="5xl">ServiceNow</Text>
+
+          <Box w="100%">
+            <Grid
+              templateColumns={{ base: "1fr", md: "200px 1fr" }}
+              gap={6}
+              alignItems="center"
+            >
+              <Image
+                src={serviceNowLogo}
+                alt="ServiceNow"
+                height="160px"
+                objectFit="contain"
+              />
+              {renderCerts("servicenow")}
+            </Grid>
+          </Box>
+
         </VStack>
       </div>
-    <Footer />
-    </motion.div>
+      <Footer />
+    </PageTransition>
   );
 };
 

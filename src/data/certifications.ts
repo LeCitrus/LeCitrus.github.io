@@ -1,4 +1,4 @@
-export type CertificationLevel = "fundamental" | "associate";
+export type CertificationLevel = "fundamental" | "associate" | "servicenow";
 
 export interface CertificationItem {
   title: string;
@@ -58,4 +58,11 @@ export const certifications: CertificationItem[] = [
     level: "associate",
     description: "Skills to prepare, model, visualize, and analyze data with Power BI."
   },
+  {title: "ServiceNow Certified System Administrator (CSA)",
+    link: "https://www.credly.com/badges/a1ce33c8-1865-4247-8c8a-10987b2a8588/public_url", 
+    issuer: "ServiceNow",
+    date: "March 20, 2026",
+    level: "servicenow",
+    description: "Validates skills in configuring, implementing, and maintaining the ServiceNow platform."
+    ,}
 ];
