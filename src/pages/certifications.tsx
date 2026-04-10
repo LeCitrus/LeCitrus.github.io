@@ -15,7 +15,8 @@ import PageTransition from "../components/PageTransition";
 
 import fundamentalsLogo from "../images/ms-fundamentals.svg";
 import associateLogo from "../images/ms-associate.svg";
-import serviceNowLogo from "../images/servicenow-csa.png";
+import serviceNowCSA from "../images/servicenow-csa.png";
+import serviceNowCAD from "../images/servicenow-cad.png";
 
 const Certifications = () => {
   const renderCerts = (level: CertificationLevel) => (
@@ -85,12 +86,28 @@ const Certifications = () => {
               alignItems="center"
             >
               <Image
-                src={serviceNowLogo}
-                alt="ServiceNow"
+                src={serviceNowCSA}
+                alt="ServiceNow CSA"
                 height="160px"
                 objectFit="contain"
               />
-              {renderCerts("servicenow")}
+              {renderCerts("servicenow-csa")}
+            </Grid>
+          </Box>
+
+          <Box w="100%">
+            <Grid
+              templateColumns={{ base: "1fr", md: "200px 1fr" }}
+              gap={6}
+              alignItems="center"
+            >
+              <Image
+                src={serviceNowCAD}
+                alt="ServiceNow CAD"
+                height="160px"
+                objectFit="contain"
+              />
+              {renderCerts("servicenow-cad")}
             </Grid>
           </Box>
 

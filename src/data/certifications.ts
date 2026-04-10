@@ -1,4 +1,4 @@
-export type CertificationLevel = "fundamental" | "associate" | "servicenow";
+export type CertificationLevel = "fundamental" | "associate" | "servicenow-csa" | "servicenow-cad";
 
 export interface CertificationItem {
   title: string;
@@ -62,7 +62,14 @@ export const certifications: CertificationItem[] = [
     link: "https://www.credly.com/badges/a1ce33c8-1865-4247-8c8a-10987b2a8588/public_url", 
     issuer: "ServiceNow",
     date: "March 20, 2026",
-    level: "servicenow",
+    level: "servicenow-csa",
     description: "Validates skills in configuring, implementing, and maintaining the ServiceNow platform."
-    ,}
+    },
+    {title: "ServiceNow Certified Application Developer (CAD)",
+    link: "https://www.credly.com/badges/e476e2ae-acc0-40c5-9275-03f442d7b264/public_url",
+    issuer: "ServiceNow",
+    date: "April 9, 2026",
+    level: "servicenow-cad",
+    description: "Validates skills in designing and developing applications on the ServiceNow platform."
+    }
 ];
