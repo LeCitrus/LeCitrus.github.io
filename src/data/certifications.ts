@@ -58,6 +58,14 @@ export const certifications: CertificationItem[] = [
     level: "associate",
     description: "Skills to prepare, model, visualize, and analyze data with Power BI."
   },
+  {
+    title: "Fabric Analytics Engineer Associate (DP-600)",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/CurtisKan-1821/A549D38277C6581B?sharingId=30423B6F5CF068B3",
+    issuer: "Microsoft",
+    date: "September 18, 2026",
+    level: "associate",
+    description: "Designing, creating, and deploying enterprise-scale data analytics solutions."
+  },
   {title: "ServiceNow Certified System Administrator (CSA)",
     link: "https://www.credly.com/badges/a1ce33c8-1865-4247-8c8a-10987b2a8588/public_url", 
     issuer: "ServiceNow",
