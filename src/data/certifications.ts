@@ -1,4 +1,4 @@
-export type CertificationLevel = "fundamental" | "associate" | "servicenow-csa" | "servicenow-cad";
+export type CertificationLevel = "fundamental" | "associate" | "servicenow-csa" | "servicenow-cad" | "servicenow-cisdf";
 
 export interface CertificationItem {
   title: string;
@@ -79,5 +79,12 @@ export const certifications: CertificationItem[] = [
     date: "April 9, 2026",
     level: "servicenow-cad",
     description: "Validates skills in designing and developing applications on the ServiceNow platform."
+    },
+    {title: "ServiceNow Certified Implementation Specialist - Data Foundations (CMDB and CSDM) (CIS-DF(CMDB and CSDM))",
+    link: "https://www.credly.com/badges/bf9efe46-419d-42cf-9394-63cc2f606c78/public_url",
+    issuer: "ServiceNow",
+    date: "September 23, 2026",
+    level: "servicenow-cisdf",
+    description: "Successfully design, implement, and operationalize a ServiceNow CMBD supporting the CSDM framework."
     }
 ];

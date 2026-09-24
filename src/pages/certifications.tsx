@@ -17,6 +17,7 @@ import fundamentalsLogo from "../images/ms-fundamentals.svg";
 import associateLogo from "../images/ms-associate.svg";
 import serviceNowCSA from "../images/servicenow-csa.png";
 import serviceNowCAD from "../images/servicenow-cad.png";
+import serviceNowCISDF from "../images/servicenow-cisdf.png";
 
 const Certifications = () => {
   const renderCerts = (level: CertificationLevel) => (
@@ -108,6 +109,22 @@ const Certifications = () => {
                 objectFit="contain"
               />
               {renderCerts("servicenow-cad")}
+            </Grid>
+          </Box>
+
+          <Box w="100%">
+            <Grid
+              templateColumns={{ base: "1fr", md: "200px 1fr" }}
+              gap={6}
+              alignItems="center"
+            >
+              <Image
+                src={serviceNowCISDF}
+                alt="ServiceNow CIS-DF"
+                height="160px"
+                objectFit="contain"
+              />
+              {renderCerts("servicenow-cisdf")}
             </Grid>
           </Box>
 
